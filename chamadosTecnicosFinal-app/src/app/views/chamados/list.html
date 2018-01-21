@@ -11,6 +11,7 @@
             <tr>
                 <th scope="col">Problema</th>
                 <th scope="col">Aprovação</th>
+                <th scope="col">Cliente</th>
                 <th scope="col">Status</th>
                 <th scope="col">Tipo</th>
                 <th scope="col"></th>
@@ -19,7 +20,8 @@
         <tbody>
             <tr ng-repeat="rec in vm.records">
                 <th scope="row">{{rec.descricaoProblema}}</th>
-                <td>{{rec.aprovacao}}</td>
+                <td>{{rec.aprovacao | date : 'dd/MM/yyyy HH:mm'}}</td>
+                <td>{{rec.cliente.nome}}</td>
                 <td>{{rec.status}}</td>
                 <td>{{rec.tipo}}</td>
                 <td style="text-align: right">
