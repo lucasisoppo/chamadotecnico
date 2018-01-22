@@ -16,6 +16,7 @@ export default class ListController {
         this._service.findAll()
           .then(data => {
               this.records = data
+              console.log('Equipamento', data)
           })
           .catch(error => {
               console.log(error)
